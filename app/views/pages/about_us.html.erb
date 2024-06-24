@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <% content_for :additional_stylesheets do %>
+        <link rel="stylesheet" href="<%= asset_path 'pages_about_us.css' %>">
+    <% end %>
+
+    
+</head>
+
+<body>
+ 
+    <section>
+        <article>
+        <%= image_tag('Peaceful, Human Rights and Freedom to Speak and Expression_ Grou.jpg',class: 'main-img' ,style: 'padding: 20px; box-shadow: rgba(53, 55, 58, 0.2) 0px 8px 24px;') %>
+            <div>
+                <h3>Our Story</h3>
+                <%= image_tag('pngegg.png', class: 'logo') %>
+                <p style="padding: 40px 15px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure exercitationem, atque consectetur delectus culpa hic architecto at natus reprehenderit veniam, velit consequatur aliquam cum rerum nisi. Error at atque, ullam maxime ducimus cumque hic, eius odit repudiandae, laudantium assumenda suscipit.
+                <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit hic laboriosam blanditiis praesentium amet provident nostrum ut doloremque nam officia rerum repellendus tempore nesciunt, assumenda voluptatum tenetur eius laborum pariatur!</p>
+            </div>
+          
+        </article>
+
+        <div class="meetteam">
+            <h2>MEET TEAM</h2>
+        </div>
+
+    </section>
+
+    
+</body>
+</html>

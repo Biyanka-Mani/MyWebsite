@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <% content_for :additional_stylesheets do %>
+        <link rel="stylesheet" href="<%= asset_path 'pages_dashboard.css' %>">
+    <% end %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    
+    <section>
+      <table >
+        <thead>
+            <tr>
+              <th>User Name</th>
+              <th>Contact</th>
+              <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                  <td><%=user.firstname %> <%= user.lastname %></td>
+                  <td><%=user.phone %></td>
+                  <td>
+
+                    <%= link_to  user_path(user.id) do %>
+                      <span class="material-symbols-outlined icon-spacing">person</span>
+                    <% end %>
+
+
+                    <%= link_to edit_user_path(user) do %>
+                      <span class="material-symbols-outlined icon-spacing">edit</span>
+                    <% end %>
+                    
+                    <%= link_to  user_path(user), data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?"
+                      } do %>
+                      <span class="material-symbols-outlined icon-spacing">delete</span>
+                    <% end %>
+                  </td>
+                  
+                  
+              </tr>
+            <% end %>
+        </tbody>
+
+      </table>
+    </section>
+   
+</body>
+</html>

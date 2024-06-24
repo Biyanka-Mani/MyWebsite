@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyWebsite</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="<%= asset_path 'style.css' %>">
+    <%= yield :additional_stylesheets %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header>
+      <div class="banner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, in.</div>
+      <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, facere?</h1>
+    </header>
+    <nav>
+      <%= link_to 'Dashboard',dashboard_path, style:"text-decoration: none;"  %>
+      <div class="right-nav">
+          <%= link_to 'Home',root_path, style:"text-decoration: none;"  %>
+          <%= link_to 'About Us',about_us_path, style:"text-decoration: none;"  %>
+          <%= link_to 'Contact',contact_path, style:"text-decoration: none;"  %>
+          <%= link_to 'Login',login_path, style:"text-decoration: none;"  %>
+          <%= link_to 'SignUp',signup_path, style:"text-decoration: none;"  %>
+      </div>
+    </nav>
+    
+    <% flash.each do |name,message| %>
+      <%= message %>
+    <% end %>
+
+    <%= yield %>
+
+    <footer>
+        <div class="socialmedia-icons">
+ 
+            <a href="#"><%= image_tag("facebook_2168281.png", class: "social-icons") %></a>
+            <a href="#"><%= image_tag("instagram_1384015.png", class: "social-icons") %></a>
+            <a href="#"><%= image_tag("youtube_4494467.png", class: "social-icons") %></a>
+            <a href="#"><%= image_tag("tiktok_3116491.png", class: "social-icons") %></a>
+            <a href="#"><%= image_tag("whatsapp_733641.png", class: "social-icons") %></a>
+ 
+        </div>
+        <div class="copyright">
+            Lorem &copy;2024 Chromium Solution
+         </div>
+        <div class="footer-navigations">
+        <%= link_to 'Home',root_path, style:"text-decoration: none;"  %>|
+        <%= link_to 'Login',login_path, style:"text-decoration: none;"  %>|
+        <%= link_to 'Dashboard',dashboard_path, style:"text-decoration: none;"  %>|
+        <%= link_to 'Contact',contact_path, style:"text-decoration: none;"  %>
+        </div>
+     </footer>
+  </body>
+</html>

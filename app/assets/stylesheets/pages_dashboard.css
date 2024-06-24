@@ -1,0 +1,25 @@
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    max-width: 1000px; 
+    margin: 100px auto;
+    border: 1px solid #231b1b;
+    
+  }
+
+
+  
+  td, th {
+    border: 1px solid #252424;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #c48585;
+  }
+  .icon-spacing{
+    margin: 5px 20px;
+  }

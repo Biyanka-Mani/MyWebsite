@@ -1,0 +1,98 @@
+<%= form_with  model: @user do |form| %>
+            <div class="data">
+                <%= form.label :firstname %><br>
+                <%= form.text_field :firstname , placeholder: "Enter your Firstname",class:"inputs"%>
+                <% @user.errors.full_messages_for(:firstname).each do |message| %>
+                    <div><%= message %></div>
+                <% end %>
+            </div>
+            <div class="data">
+                <%= form.label :lastname %><br>
+                <%= form.text_field :lastname , placeholder: "Enter your Lastname",class:"inputs"%>
+                <% @user.errors.full_messages_for(:lastname).each do |message| %>
+                    <div><%= message %></div>
+                <% end %>
+            </div>
+            <div class="data">
+                <%= form.label :username %><br>
+                <%= form.text_field :username , placeholder: "Enter Username",class:"inputs"%>
+                <% @user.errors.full_messages_for(:username).each do |message| %>
+                    <div><%= message %></div>
+                <% end %>
+            </div>
+            <div class="data">
+                <%= form.label :password %><br>
+                <%= form.text_field :password , placeholder: "Enter Password",class:"inputs"%>
+                <% @user.errors.full_messages_for(:password).each do |message| %>
+                    <div><%= message %></div>
+                <% end %>
+            </div>
+            <div class="data">
+                <%= form.label :phone %><br>
+                <%= form.text_field :phone , placeholder: "Enter Your Phone",class:"inputs"%>
+                <% @user.errors.full_messages_for(:password).each do |message| %>
+                    <div><%= message %></div> 
+                 <% end %>  
+            </div>
+            <div class="data">
+                <%= form.label :dob %><br>
+                <%= form.date_select :dob %>
+                <% @user.errors.full_messages_for(:dob).each do |message| %>
+                    <div><%= message %></div> 
+                <% end %> 
+            </div>
+            <div class="data">
+                <%= form.label :address %><br>
+                <%= form.text_area :address , placeholder: "Enter Your Address",class:"inputs"%>
+                <% @user.errors.full_messages_for(:address).each do |message| %>
+                    <div><%= message %></div> 
+                <% end %> 
+            </div>
+
+            <div class="data">
+                <%= form.label :age %><br>
+                <%= form.text_field :age, placeholder: "Enter Your Age",class:"inputs"%>
+                <% @user.errors.full_messages_for(:age).each do |message| %>
+                    <div><%= message %></div> 
+                <% end %> 
+            </div>
+            <div class="data">
+                <%= form.label :status %><br>
+                <%= form.select :status, options_for_select(['Married', 'Single']), { prompt: 'Select Status' } %>
+                <% @user.errors.full_messages_for(:status).each do |message| %>
+                    <div><%= message %></div> 
+                <% end %> 
+            </div>
+            <div class="data">
+                <%= form.label :experience %><br>
+                <%= form.text_field :experience, placeholder: "Enter Your Experience",class:"inputs"%>
+                <% @user.errors.full_messages_for(:experience).each do |message| %>
+                    <div><%= message %></div> 
+                <% end %> 
+            </div>
+            <div class="data">
+                <%= form.label :bio %><br>
+                <%= form.text_area :bio, placeholder: "Enter Your Bio",class:"inputs"%>
+                <% @user.errors.full_messages_for(:bio).each do |message| %>
+                    <div><%= message %></div> 
+                <% end %> 
+            </div>
+            <div class="data">
+                <%= form.label :work_summary %><br>
+                <%= form.text_area :work_summary, placeholder: "Enter Your Work Summary",class:"inputs"%>
+                <% @user.errors.full_messages_for(:work_summary).each do |message| %>
+                    <div><%= message %></div> 
+                 <% end %> 
+            </div>
+            <div class="data">
+                <%= form.label :mail %><br>
+                <%= form.text_field:mail, placeholder: "Enter Your Email",class:"inputs"%>
+                <% @user.errors.full_messages_for(:mail).each do |message| %>
+                    <div><%= message %></div> 
+                <% end %> 
+            </div>
+
+            <div class="btn">
+                <%= form.submit %>
+            </div>
+<% end %>

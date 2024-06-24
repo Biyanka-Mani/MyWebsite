@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+ 
+    <% content_for :additional_stylesheets do %>
+        <link rel="stylesheet" href="<%= asset_path 'enquiries_new.css' %>">
+    <% end %>
+
+
+</head>
+<body>
+    
+    <main>
+        <h2 id="enquiries_h2">Contact Us</h2>
+        <section class="enquiries_sect">
+            <div class="contact-part">
+                <ul>
+                    <li>
+                        <%= image_tag("telephone.png", class: "image") %>+91 XXXXXXXXX(India)
+                    </li>
+                    <li>
+                    <%= image_tag("mail.png", class: "image") %>   xxxxxxxx@gmail.com
+                    </li>
+                    <li>
+                    <%= image_tag("location.png", class: "image") %>  XYZ Church Street<br>Delhi
+                    </li>
+                </ul>
+                
+            </div>
+            
+            <div class="form-part">
+
+            <h3 style="padding: 10px;">Connect Us</h3>
+            
+                    <%= form_with scope: :enquiry ,url: enquiries_path , local: true do |form| %>
+                        <div class="field">
+                          <%= form.text_field :firstname, placeholder: "First Name", class:"input_fields" %>
+                          <% @enquiry.errors.full_messages_for(:firstname).each do |message| %>
+                                <div><%= message %></div>
+                          <% end %>
+                        </div>
+                        
+                        <div class="field">
+                          <%= form.text_field :lastname, placeholder: "Last Name", class:"input_fields" %>
+                          <% @enquiry.errors.full_messages_for(:lastname).each do |message| %>
+                            <div><%= message %></div>
+                          <% end %>
+                        </div>
+                        
+                        <div class="field">
+                          <%= form.email_field :email, placeholder: "abc@gmail.com", class:"input_fields" %>
+                          <% @enquiry.errors.full_messages_for(:email).each do |message| %>
+                            <div><%= message %></div>
+                          <% end %>
+                        </div>
+                        
+                        <div class="field">
+                          <%= form.label :country %><br>
+                          <%= form.select :country, options_for_select(['Afghanistan', 'Bangladesh', 'Canada', 'France', 'Germany', 'India']), { prompt: 'Select Country' }, { style: "padding: 10px; margin-bottom: 20px;width:430px;" } %>
+                        </div>
+                        
+                        <div class="field radiobtn-gender" style="padding: 10px; margin-bottom: 20px;">
+                          <%= form.label :gender, "Select Gender:" %><br>
+                          <%= form.radio_button :gender, 'Male' %> <%= form.label :gender, 'Male' %><br>
+                          <%= form.radio_button :gender, 'Female' %> <%= form.label :gender, 'Female' %><br>
+                          <%= form.radio_button :gender, 'Other' %> <%= form.label :gender, 'Other' %>
+                        </div>
+                        
+                        <div class="field">
+                          <%= form.text_area :message, rows: 6, cols: 58, placeholder: "Message Us", class:"input_fields" %>
+                          <% @enquiry.errors.full_messages_for(:message).each do |message| %>
+                            <div><%= message %></div>
+                          <% end %>
+                        </div>
+                        
+                        <div class="field">
+                          <%= form.check_box :subscription %>
+                          <%= form.label :subscription, "Send Us messages on email" %>
+                        </div>
+                        
+                        <div class="actions">
+                          <%= form.submit "Message Us", class: "submitbutton" %>
+                        </div>
+                      
+                    <%end%>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

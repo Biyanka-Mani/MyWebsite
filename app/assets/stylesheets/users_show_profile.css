@@ -1,0 +1,86 @@
+.profile-main{
+    display:flex;
+}
+.basic-info{
+    background-color: bisque;
+    margin:20px ;
+    height: 600px;
+    width:330px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.basic-info img{
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    border-radius: 80%;
+}
+
+.user-name{
+    padding-left: 30%;
+}
+.profile{
+    margin: 20px;
+    background-color: rgb(213, 111, 111);
+    font-family: 20px;
+    font-weight: 400;
+    height: 200px;
+    border-radius: 30%;
+}
+.profile ul{
+    list-style: none;
+    padding: 30px;
+    font-size: 20px;
+}
+.profile li{
+    margin: 10px;
+}
+/*bio*/
+.bio{
+    margin:20px ;
+    height: 600px;
+    width:1500px;
+   
+
+}
+details{
+    margin-bottom:  10px;
+}
+.bio-intro{
+    background-color: bisque;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.bio-contact{
+    background-color: bisque;
+    padding-left: 20px;
+    margin-top: 30px;
+    height: 370px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.profile-photo{
+    width: 30px;
+    height:30px;
+    margin-right: 20px;
+}
+.contact{
+    margin-top:39px;
+    padding-left: 7px;
+   
+    
+
+}
+.image{
+    width: 30px;
+    height:30px;
+    margin-right: 20px;
+}
+.contact ul{
+    list-style: none;
+    
+}
+.contact li{
+    display: flex;
+    margin-bottom: 10px;
+}

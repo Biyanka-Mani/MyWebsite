@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit View</title>
+    
+    <% content_for :additional_stylesheets do %>
+        <link rel="stylesheet" href="<%= asset_path 'users_edituser.css' %>">
+    <% end %>
+</head>
+<body>
+
+    <section class="form-sect">
+       
+       <%= render 'form' %>
+    </section>
+
+</body>
+</html>

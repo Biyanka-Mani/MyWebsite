@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <% content_for :additional_stylesheets do %>
+        <link rel="stylesheet" href="<%= asset_path 'users_show_profile.css' %>">
+    <% end %>
+</head>
+<body>
+    <main class="profile-main">
+        <section class="basic-info">
+            <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA4L2pvYjExMjAtZWxlbWVudC0xOS5wbmc.png" alt="profilephoto" class="profile-photo">
+            <h2 class="user-name"><%= @user.firstname %> <%= @user.lastname %></h2>
+            <h4 class="user-name">Designation</h4>
+            <div class="profile" >
+                <ul>
+                    <li><b>Age</b> :<%= @user.age %></li>
+                    <li><b>Status</b> :<%= @user.status%></li>
+                    <li><b>Experience</b> : <%= @user.experience %></li>
+                </ul>
+            </div>
+        </section>
+        <section class="bio">
+            <div class="bio-intro">
+                <h2 style="padding-bottom: 10px;">Bio</h3>
+                <%= @user.bio %>
+            </div>
+            <div class="bio-contact">
+                <div class="work-summary">
+                    <h2 style="padding-top: 20px;padding-bottom: 20px;">Work Summary</h2>
+                    <details>
+                    <%= @user.work_summary %>
+                    </details>
+                    
+                </div>
+                <div class="contact">
+                    <h2 style="margin-left: 10px;margin-bottom: 30px;">Contact</h2>
+                    <ul>
+                        <li>
+                            <%= image_tag("telephone.png", class:"image") %> +91 <%= @user.phone %>(India)
+                        </li>
+                        <li>
+                            <%= image_tag("mail.png", class:"image") %> <%= @user.mail %>
+                        </li>
+                        <li>
+                            <%= image_tag("location.png", class:"image") %> <%= @user.address %>
+                        </li>
+                    </ul>
+                  
+                </div>
+
+            </div>
+
+
+        </section>
+       
+    </main>
+
+</body>
+</html>

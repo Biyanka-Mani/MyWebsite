@@ -1,0 +1,30 @@
+article{
+    display: flex;
+    gap:10px;
+}
+article {
+    padding: 20px;
+    box-shadow: rgba(68, 76, 88, 0.2) 0px 8px 24px;
+
+
+}
+h3{
+    font-size: 40px;
+    margin-left: 30%;
+    margin-bottom: 20px;
+}
+.logo{
+    width:100px;
+    height: 100px;
+    margin-left: 35%;
+}
+.meetteam{
+    height: 400px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.meetteam h2{
+    font-weight: 500;
+    padding-left: 45%;
+    font-size: 30px;
+}

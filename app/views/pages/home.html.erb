@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <% content_for :additional_stylesheets do %>
+        <link rel="stylesheet" href="<%= asset_path 'pages_home.css' %>">
+    <% end %>
+</head>
+<body>
+    <main class="home-main">
+
+      <section>
+        <div class="para-intro">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, odit enim mollitia quo quae quia quam. Quisquam molestiae consequuntur, rerum cum labore doloribus quia ut fugiat omnis consequatur eaque sapiente! 
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit deserunt hic rem earum minus ea provident praesentium nobis pariatur est? Fuga neque minima libero dolorum voluptas minus facilis, maiores eligendi.  
+        </div>
+        <article>
+            <div class="part-1">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptatibus temporibus quas delectus quae maxime rerum tempora ratione asperiores et.
+            </div>
+            <div class="part-2">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, tempora. Maxime quos at alias sunt veritatis explicabo quis? Expedita, unde?
+            </div>
+
+        </article>   
+
+        
+      </section>
+      
+      <figure>
+        <img src="https://img.freepik.com/premium-photo/white-helmet-sits-table-front-white-wall_826801-945.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1714089600&semt=ais" class="img-main">
+        <figcaption>Caption</figcaption>
+      </figure>
+     
+    </main>
+   
+</body>
+</html>

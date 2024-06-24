@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <% content_for :additional_stylesheets do %>
+        <link rel="stylesheet" href="<%= asset_path 'users_login.css' %>">
+    <% end %>
+
+</head>
+<body>
+
+    <main class="login-main">
+        <h2 style="font-size: 50px; font-weight: 400; padding-left: 45%;">Log In</h1>
+        <section class="sect">
+            <%= form_with  scope: :user,url: autheticator_path ,local: true do |form| %>
+                
+                <div class="col username">
+                    <%= form.label :username %><br>
+                    <%= form.text_field :username , placeholder: "Enter your  Username",class: "inputfield"%>
+                    
+                </div>    
+                <div class="col password">
+                    <%= form.label :password %><br>
+                    <%= form.text_field :password , placeholder: "Enter your  password",class: "inputfield"%>
+               
+                </div>
+                
+                <button class="submitbutton">
+                    Log In
+                </Button>
+            <% end %>
+            
+            <div class="socialmedialogin">
+                <a></a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
